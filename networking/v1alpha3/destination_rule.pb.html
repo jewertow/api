@@ -6,7 +6,7 @@ layout: protoc-gen-docs
 generator: protoc-gen-docs
 schema: istio.networking.v1alpha3.DestinationRule
 aliases: [/docs/reference/config/networking/v1alpha3/destination-rule]
-number_of_entries: 20
+number_of_entries: 22
 ---
 <p><code>DestinationRule</code> defines policies that apply to traffic intended for a
 service after routing has occurred. These rules specify configuration
@@ -314,6 +314,15 @@ settings specified at the destination-level will not be inherited when
 overridden by port-level settings, i.e. default values will be applied
 to fields omitted in port-level traffic policies.</p>
 
+</td>
+<td>
+No
+</td>
+</tr>
+<tr id="TrafficPolicy-tunneling">
+<td><code>tunneling</code></td>
+<td><code><a href="#TrafficPolicy-TunnelingSettings">TunnelingSettings</a></code></td>
+<td>
 </td>
 <td>
 No
@@ -1362,6 +1371,39 @@ No
 </tbody>
 </table>
 </section>
+<h2 id="TrafficPolicy-TunnelingSettings">TrafficPolicy.TunnelingSettings</h2>
+<section>
+<table class="message-fields">
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr id="TrafficPolicy-TunnelingSettings-method">
+<td><code>method</code></td>
+<td><code><a href="#TrafficPolicy-TunnelingSettings-TunnelingMethod">TunnelingMethod</a></code></td>
+<td>
+</td>
+<td>
+No
+</td>
+</tr>
+<tr id="TrafficPolicy-TunnelingSettings-port">
+<td><code>port</code></td>
+<td><code>uint32</code></td>
+<td>
+</td>
+<td>
+No
+</td>
+</tr>
+</tbody>
+</table>
+</section>
 <h2 id="LoadBalancerSettings-ConsistentHashLB">LoadBalancerSettings.ConsistentHashLB</h2>
 <section>
 <p>Consistent Hash-based load balancing can be used to provide soft
@@ -1828,6 +1870,29 @@ No
 </td>
 <td>
 No
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<h2 id="TrafficPolicy-TunnelingSettings-TunnelingMethod">TrafficPolicy.TunnelingSettings.TunnelingMethod</h2>
+<section>
+<table class="enum-values">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr id="TrafficPolicy-TunnelingSettings-TunnelingMethod-CONNECT">
+<td><code>CONNECT</code></td>
+<td>
+</td>
+</tr>
+<tr id="TrafficPolicy-TunnelingSettings-TunnelingMethod-POST">
+<td><code>POST</code></td>
+<td>
 </td>
 </tr>
 </tbody>

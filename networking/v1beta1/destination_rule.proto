@@ -282,6 +282,19 @@ message TrafficPolicy {
   // overridden by port-level settings, i.e. default values will be applied
   // to fields omitted in port-level traffic policies.
   repeated PortTrafficPolicy port_level_settings = 5;
+
+  message TunnelingSettings {
+    enum TunnelingMethod {
+      CONNECT = 0;
+      POST = 1;
+    }
+
+    TunnelingMethod method = 1;
+
+    uint32 port = 2;
+  }
+
+  TunnelingSettings tunneling = 6;
 }
 
 // A subset of endpoints of a service. Subsets can be used for scenarios
