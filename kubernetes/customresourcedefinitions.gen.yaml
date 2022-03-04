@@ -755,6 +755,16 @@ spec:
                                 type: string
                               type: array
                           type: object
+                        tunneling:
+                          properties:
+                            method:
+                              enum:
+                              - CONNECT
+                              - POST
+                              type: string
+                            port:
+                              type: integer
+                          type: object
                       type: object
                   type: object
                 type: array
@@ -1319,6 +1329,16 @@ spec:
                         items:
                           type: string
                         type: array
+                    type: object
+                  tunneling:
+                    properties:
+                      method:
+                        enum:
+                        - CONNECT
+                        - POST
+                        type: string
+                      port:
+                        type: integer
                     type: object
                 type: object
             type: object
@@ -1943,6 +1963,16 @@ spec:
                                 type: string
                               type: array
                           type: object
+                        tunneling:
+                          properties:
+                            method:
+                              enum:
+                              - CONNECT
+                              - POST
+                              type: string
+                            port:
+                              type: integer
+                          type: object
                       type: object
                   type: object
                 type: array
@@ -2507,6 +2537,16 @@ spec:
                         items:
                           type: string
                         type: array
+                    type: object
+                  tunneling:
+                    properties:
+                      method:
+                        enum:
+                        - CONNECT
+                        - POST
+                        type: string
+                      port:
+                        type: integer
                     type: object
                 type: object
             type: object

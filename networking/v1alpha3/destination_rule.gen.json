@@ -537,6 +537,9 @@
             "items": {
               "$ref": "#/components/schemas/istio.networking.v1alpha3.TrafficPolicy.PortTrafficPolicy"
             }
+          },
+          "tunneling": {
+            "$ref": "#/components/schemas/istio.networking.v1alpha3.TrafficPolicy.TunnelingSettings"
           }
         }
       },
@@ -560,6 +563,24 @@
             "$ref": "#/components/schemas/istio.networking.v1alpha3.ClientTLSSettings"
           }
         }
+      },
+      "istio.networking.v1alpha3.TrafficPolicy.TunnelingSettings": {
+        "type": "object",
+        "properties": {
+          "method": {
+            "$ref": "#/components/schemas/istio.networking.v1alpha3.TrafficPolicy.TunnelingSettings.TunnelingMethod"
+          },
+          "port": {
+            "type": "integer"
+          }
+        }
+      },
+      "istio.networking.v1alpha3.TrafficPolicy.TunnelingSettings.TunnelingMethod": {
+        "type": "string",
+        "enum": [
+          "CONNECT",
+          "POST"
+        ]
       }
     }
   }
