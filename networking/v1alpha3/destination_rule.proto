@@ -284,16 +284,15 @@ message TrafficPolicy {
   repeated PortTrafficPolicy port_level_settings = 5;
 
   message TunnelingSettings {
-    enum TunnelingMethod {
-      CONNECT = 0;
-      POST = 1;
-    }
+    // Port to which the request is tunneled.
+    uint32 destination_port = 1 [(google.api.field_behavior) = REQUIRED];
 
-    TunnelingMethod method = 1;
-
-    uint32 port = 2;
+    // Specifies whether to use CONNECT or POST http method for the upstream tunnel request.
+    // If set to true, then POST is used, otherwise CONNECT.
+    bool use_post = 2;
   }
 
+  // Configuration for tunneling TCP over HTTP.
   TunnelingSettings tunneling = 6;
 }
 

@@ -567,20 +567,15 @@
       "istio.networking.v1beta1.TrafficPolicy.TunnelingSettings": {
         "type": "object",
         "properties": {
-          "method": {
-            "$ref": "#/components/schemas/istio.networking.v1beta1.TrafficPolicy.TunnelingSettings.TunnelingMethod"
-          },
-          "port": {
+          "destinationPort": {
+            "description": "Port to which the request is tunneled.",
             "type": "integer"
+          },
+          "usePost": {
+            "description": "Specifies whether to use CONNECT or POST http method for the upstream tunnel request. If set to true, then POST is used, otherwise CONNECT.",
+            "type": "boolean"
           }
         }
-      },
-      "istio.networking.v1beta1.TrafficPolicy.TunnelingSettings.TunnelingMethod": {
-        "type": "string",
-        "enum": [
-          "CONNECT",
-          "POST"
-        ]
       }
     }
   }
