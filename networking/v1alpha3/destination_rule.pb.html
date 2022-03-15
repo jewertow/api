@@ -6,7 +6,7 @@ layout: protoc-gen-docs
 generator: protoc-gen-docs
 schema: istio.networking.v1alpha3.DestinationRule
 aliases: [/docs/reference/config/networking/v1alpha3/destination-rule]
-number_of_entries: 20
+number_of_entries: 21
 ---
 <p><code>DestinationRule</code> defines policies that apply to traffic intended for a
 service after routing has occurred. These rules specify configuration
@@ -313,6 +313,17 @@ settings will override the destination-level settings. Traffic
 settings specified at the destination-level will not be inherited when
 overridden by port-level settings, i.e. default values will be applied
 to fields omitted in port-level traffic policies.</p>
+
+</td>
+<td>
+No
+</td>
+</tr>
+<tr id="TrafficPolicy-tunneling">
+<td><code>tunneling</code></td>
+<td><code><a href="#TrafficPolicy-TunnelingSettings">TunnelingSettings</a></code></td>
+<td>
+<p>Configuration for tunneling TCP over HTTP.</p>
 
 </td>
 <td>
@@ -1353,6 +1364,44 @@ No
 <td><code><a href="#ClientTLSSettings">ClientTLSSettings</a></code></td>
 <td>
 <p>TLS related settings for connections to the upstream service.</p>
+
+</td>
+<td>
+No
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<h2 id="TrafficPolicy-TunnelingSettings">TrafficPolicy.TunnelingSettings</h2>
+<section>
+<table class="message-fields">
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr id="TrafficPolicy-TunnelingSettings-destination_port">
+<td><code>destinationPort</code></td>
+<td><code>uint32</code></td>
+<td>
+<p>Specifies a port to which the downstream connection is tunneled.</p>
+
+</td>
+<td>
+Yes
+</td>
+</tr>
+<tr id="TrafficPolicy-TunnelingSettings-use_post">
+<td><code>usePost</code></td>
+<td><code>bool</code></td>
+<td>
+<p>Specifies whether to use CONNECT or POST http method for the upstream tunnel request.
+If set to true, then POST is used, otherwise CONNECT.</p>
 
 </td>
 <td>

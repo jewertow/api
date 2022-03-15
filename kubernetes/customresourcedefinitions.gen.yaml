@@ -755,6 +755,18 @@ spec:
                                 type: string
                               type: array
                           type: object
+                        tunneling:
+                          description: Configuration for tunneling TCP over HTTP.
+                          properties:
+                            destinationPort:
+                              description: Specifies a port to which the downstream
+                                connection is tunneled.
+                              type: integer
+                            usePost:
+                              description: Specifies whether to use CONNECT or POST
+                                http method for the upstream tunnel request.
+                              type: boolean
+                          type: object
                       type: object
                   type: object
                 type: array
@@ -1319,6 +1331,18 @@ spec:
                         items:
                           type: string
                         type: array
+                    type: object
+                  tunneling:
+                    description: Configuration for tunneling TCP over HTTP.
+                    properties:
+                      destinationPort:
+                        description: Specifies a port to which the downstream connection
+                          is tunneled.
+                        type: integer
+                      usePost:
+                        description: Specifies whether to use CONNECT or POST http
+                          method for the upstream tunnel request.
+                        type: boolean
                     type: object
                 type: object
             type: object
@@ -1943,6 +1967,18 @@ spec:
                                 type: string
                               type: array
                           type: object
+                        tunneling:
+                          description: Configuration for tunneling TCP over HTTP.
+                          properties:
+                            destinationPort:
+                              description: Specifies a port to which the downstream
+                                connection is tunneled.
+                              type: integer
+                            usePost:
+                              description: Specifies whether to use CONNECT or POST
+                                http method for the upstream tunnel request.
+                              type: boolean
+                          type: object
                       type: object
                   type: object
                 type: array
@@ -2507,6 +2543,18 @@ spec:
                         items:
                           type: string
                         type: array
+                    type: object
+                  tunneling:
+                    description: Configuration for tunneling TCP over HTTP.
+                    properties:
+                      destinationPort:
+                        description: Specifies a port to which the downstream connection
+                          is tunneled.
+                        type: integer
+                      usePost:
+                        description: Specifies whether to use CONNECT or POST http
+                          method for the upstream tunnel request.
+                        type: boolean
                     type: object
                 type: object
             type: object
