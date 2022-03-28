@@ -540,6 +540,9 @@
             "items": {
               "$ref": "#/components/schemas/istio.networking.v1alpha3.TrafficPolicy.PortTrafficPolicy"
             }
+          },
+          "tunneling": {
+            "$ref": "#/components/schemas/istio.networking.v1alpha3.TrafficPolicy.TunnelingSettings"
           }
         }
       },
@@ -561,6 +564,19 @@
           },
           "tls": {
             "$ref": "#/components/schemas/istio.networking.v1alpha3.ClientTLSSettings"
+          }
+        }
+      },
+      "istio.networking.v1alpha3.TrafficPolicy.TunnelingSettings": {
+        "type": "object",
+        "properties": {
+          "destinationPort": {
+            "description": "Specifies a port to which the downstream connection is tunneled.",
+            "type": "integer"
+          },
+          "usePost": {
+            "description": "Specifies whether to use CONNECT or POST http method for the upstream tunnel request. If set to true, then POST is used, otherwise CONNECT.",
+            "type": "boolean"
           }
         }
       },
