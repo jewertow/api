@@ -755,17 +755,18 @@ spec:
                                 type: string
                               type: array
                           type: object
-                        tunneling:
-                          description: Configuration for tunneling TCP over HTTP.
+                        tunnel:
+                          description: Configuration for tunneling TCP over HTTP for
+                            the host configured in the DestinationRule.
                           properties:
                             destinationPort:
                               description: Specifies a port to which the downstream
                                 connection is tunneled.
                               type: integer
-                            usePost:
-                              description: Specifies whether to use CONNECT or POST
-                                http method for the upstream tunnel request.
-                              type: boolean
+                            protocol:
+                              description: Specifies which HTTP method to use for
+                                the upstream tunnel request.
+                              type: string
                           type: object
                       type: object
                   type: object
@@ -1332,17 +1333,18 @@ spec:
                           type: string
                         type: array
                     type: object
-                  tunneling:
-                    description: Configuration for tunneling TCP over HTTP.
+                  tunnel:
+                    description: Configuration for tunneling TCP over HTTP for the
+                      host configured in the DestinationRule.
                     properties:
                       destinationPort:
                         description: Specifies a port to which the downstream connection
                           is tunneled.
                         type: integer
-                      usePost:
-                        description: Specifies whether to use CONNECT or POST http
-                          method for the upstream tunnel request.
-                        type: boolean
+                      protocol:
+                        description: Specifies which HTTP method to use for the upstream
+                          tunnel request.
+                        type: string
                     type: object
                 type: object
               workloadSelector:
@@ -1974,17 +1976,18 @@ spec:
                                 type: string
                               type: array
                           type: object
-                        tunneling:
-                          description: Configuration for tunneling TCP over HTTP.
+                        tunnel:
+                          description: Configuration for tunneling TCP over HTTP for
+                            the host configured in the DestinationRule.
                           properties:
                             destinationPort:
                               description: Specifies a port to which the downstream
                                 connection is tunneled.
                               type: integer
-                            usePost:
-                              description: Specifies whether to use CONNECT or POST
-                                http method for the upstream tunnel request.
-                              type: boolean
+                            protocol:
+                              description: Specifies which HTTP method to use for
+                                the upstream tunnel request.
+                              type: string
                           type: object
                       type: object
                   type: object
@@ -2551,17 +2554,18 @@ spec:
                           type: string
                         type: array
                     type: object
-                  tunneling:
-                    description: Configuration for tunneling TCP over HTTP.
+                  tunnel:
+                    description: Configuration for tunneling TCP over HTTP for the
+                      host configured in the DestinationRule.
                     properties:
                       destinationPort:
                         description: Specifies a port to which the downstream connection
                           is tunneled.
                         type: integer
-                      usePost:
-                        description: Specifies whether to use CONNECT or POST http
-                          method for the upstream tunnel request.
-                        type: boolean
+                      protocol:
+                        description: Specifies which HTTP method to use for the upstream
+                          tunnel request.
+                        type: string
                     type: object
                 type: object
               workloadSelector:

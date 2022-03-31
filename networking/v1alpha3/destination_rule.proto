@@ -341,17 +341,18 @@ message TrafficPolicy {
   // to fields omitted in port-level traffic policies.
   repeated PortTrafficPolicy port_level_settings = 5;
 
-  message TunnelingSettings {
-    // Specifies a port to which the downstream connection is tunneled.
-    uint32 destination_port = 1 [(google.api.field_behavior) = REQUIRED];
+  message TunnelSettings {
+    // Specifies which HTTP method to use for the upstream tunnel request.
+    // Supported protocol values are "CONNECT" and "POST".
+    // CONNECT method is used by default.
+    string protocol = 1;
 
-    // Specifies whether to use CONNECT or POST http method for the upstream tunnel request.
-    // If set to true, then POST is used, otherwise CONNECT.
-    bool use_post = 2;
+    // Specifies a port to which the downstream connection is tunneled.
+    uint32 destination_port = 2 [(google.api.field_behavior) = REQUIRED];
   }
 
-  // Configuration for tunneling TCP over HTTP.
-  TunnelingSettings tunneling = 6;
+  // Configuration for tunneling TCP over HTTP for the host configured in the DestinationRule.
+  TunnelSettings tunnel = 6;
 }
 
 // A subset of endpoints of a service. Subsets can be used for scenarios

@@ -387,11 +387,11 @@ to fields omitted in port-level traffic policies.</p>
 No
 </td>
 </tr>
-<tr id="TrafficPolicy-tunneling">
-<td><code>tunneling</code></td>
-<td><code><a href="#TrafficPolicy-TunnelingSettings">TunnelingSettings</a></code></td>
+<tr id="TrafficPolicy-tunnel">
+<td><code>tunnel</code></td>
+<td><code><a href="#TrafficPolicy-TunnelSettings">TunnelSettings</a></code></td>
 <td>
-<p>Configuration for tunneling TCP over HTTP.</p>
+<p>Configuration for tunneling TCP over HTTP for the host configured in the DestinationRule.</p>
 
 </td>
 <td>
@@ -1441,7 +1441,7 @@ No
 </tbody>
 </table>
 </section>
-<h2 id="TrafficPolicy-TunnelingSettings">TrafficPolicy.TunnelingSettings</h2>
+<h2 id="TrafficPolicy-TunnelSettings">TrafficPolicy.TunnelSettings</h2>
 <section>
 <table class="message-fields">
 <thead>
@@ -1453,7 +1453,20 @@ No
 </tr>
 </thead>
 <tbody>
-<tr id="TrafficPolicy-TunnelingSettings-destination_port">
+<tr id="TrafficPolicy-TunnelSettings-protocol">
+<td><code>protocol</code></td>
+<td><code>string</code></td>
+<td>
+<p>Specifies which HTTP method to use for the upstream tunnel request.
+Supported protocol values are &ldquo;CONNECT&rdquo; and &ldquo;POST&rdquo;.
+CONNECT method is used by default.</p>
+
+</td>
+<td>
+No
+</td>
+</tr>
+<tr id="TrafficPolicy-TunnelSettings-destination_port">
 <td><code>destinationPort</code></td>
 <td><code>uint32</code></td>
 <td>
@@ -1462,18 +1475,6 @@ No
 </td>
 <td>
 Yes
-</td>
-</tr>
-<tr id="TrafficPolicy-TunnelingSettings-use_post">
-<td><code>usePost</code></td>
-<td><code>bool</code></td>
-<td>
-<p>Specifies whether to use CONNECT or POST http method for the upstream tunnel request.
-If set to true, then POST is used, otherwise CONNECT.</p>
-
-</td>
-<td>
-No
 </td>
 </tr>
 </tbody>
