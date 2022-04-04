@@ -756,16 +756,14 @@ spec:
                               type: array
                           type: object
                         tunnel:
-                          description: Configuration for tunneling TCP over HTTP for
-                            the host configured in the DestinationRule.
                           properties:
                             destinationPort:
                               description: Specifies a port to which the downstream
                                 connection is tunneled.
                               type: integer
                             protocol:
-                              description: Specifies which HTTP method to use for
-                                the upstream tunnel request.
+                              description: Specifies which protocol to use for tunneling
+                                the downstream connection.
                               type: string
                           type: object
                       type: object
@@ -1334,16 +1332,14 @@ spec:
                         type: array
                     type: object
                   tunnel:
-                    description: Configuration for tunneling TCP over HTTP for the
-                      host configured in the DestinationRule.
                     properties:
                       destinationPort:
                         description: Specifies a port to which the downstream connection
                           is tunneled.
                         type: integer
                       protocol:
-                        description: Specifies which HTTP method to use for the upstream
-                          tunnel request.
+                        description: Specifies which protocol to use for tunneling
+                          the downstream connection.
                         type: string
                     type: object
                 type: object
@@ -1977,16 +1973,14 @@ spec:
                               type: array
                           type: object
                         tunnel:
-                          description: Configuration for tunneling TCP over HTTP for
-                            the host configured in the DestinationRule.
                           properties:
                             destinationPort:
                               description: Specifies a port to which the downstream
                                 connection is tunneled.
                               type: integer
                             protocol:
-                              description: Specifies which HTTP method to use for
-                                the upstream tunnel request.
+                              description: Specifies which protocol to use for tunneling
+                                the downstream connection.
                               type: string
                           type: object
                       type: object
@@ -2555,16 +2549,14 @@ spec:
                         type: array
                     type: object
                   tunnel:
-                    description: Configuration for tunneling TCP over HTTP for the
-                      host configured in the DestinationRule.
                     properties:
                       destinationPort:
                         description: Specifies a port to which the downstream connection
                           is tunneled.
                         type: integer
                       protocol:
-                        description: Specifies which HTTP method to use for the upstream
-                          tunnel request.
+                        description: Specifies which protocol to use for tunneling
+                          the downstream connection.
                         type: string
                     type: object
                 type: object

@@ -39,14 +39,14 @@ func (this *TrafficPolicy_PortTrafficPolicy) UnmarshalJSON(b []byte) error {
 	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 
-// MarshalJSON is a custom marshaler for TrafficPolicy_TunnelSettings
-func (this *TrafficPolicy_TunnelSettings) MarshalJSON() ([]byte, error) {
+// MarshalJSON is a custom marshaler for TrafficPolicy_TunnelSetting
+func (this *TrafficPolicy_TunnelSetting) MarshalJSON() ([]byte, error) {
 	str, err := DestinationRuleMarshaler.MarshalToString(this)
 	return []byte(str), err
 }
 
-// UnmarshalJSON is a custom unmarshaler for TrafficPolicy_TunnelSettings
-func (this *TrafficPolicy_TunnelSettings) UnmarshalJSON(b []byte) error {
+// UnmarshalJSON is a custom unmarshaler for TrafficPolicy_TunnelSetting
+func (this *TrafficPolicy_TunnelSetting) UnmarshalJSON(b []byte) error {
 	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 

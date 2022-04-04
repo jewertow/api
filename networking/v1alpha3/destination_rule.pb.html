@@ -389,9 +389,10 @@ No
 </tr>
 <tr id="TrafficPolicy-tunnel">
 <td><code>tunnel</code></td>
-<td><code><a href="#TrafficPolicy-TunnelSettings">TunnelSettings</a></code></td>
+<td><code><a href="#TrafficPolicy-TunnelSetting">TunnelSetting</a></code></td>
 <td>
-<p>Configuration for tunneling TCP over HTTP for the host configured in the DestinationRule.</p>
+<p>Configuration of tunneling TCP over other transport or application layers
+for the host configured in the DestinationRule.</p>
 
 </td>
 <td>
@@ -1441,7 +1442,7 @@ No
 </tbody>
 </table>
 </section>
-<h2 id="TrafficPolicy-TunnelSettings">TrafficPolicy.TunnelSettings</h2>
+<h2 id="TrafficPolicy-TunnelSetting">TrafficPolicy.TunnelSetting</h2>
 <section>
 <table class="message-fields">
 <thead>
@@ -1453,20 +1454,22 @@ No
 </tr>
 </thead>
 <tbody>
-<tr id="TrafficPolicy-TunnelSettings-protocol">
+<tr id="TrafficPolicy-TunnelSetting-protocol">
 <td><code>protocol</code></td>
 <td><code>string</code></td>
 <td>
-<p>Specifies which HTTP method to use for the upstream tunnel request.
-Supported protocol values are &ldquo;CONNECT&rdquo; and &ldquo;POST&rdquo;.
-CONNECT method is used by default.</p>
+<p>Specifies which protocol to use for tunneling the downstream connection.
+Supported protocols are:
+  connect - uses HTTP CONNECT;
+  post - uses HTTP POST.
+HTTP version for upstream requests is determined by the service protocol defined for the proxy.</p>
 
 </td>
 <td>
-No
+Yes
 </td>
 </tr>
-<tr id="TrafficPolicy-TunnelSettings-destination_port">
+<tr id="TrafficPolicy-TunnelSetting-destination_port">
 <td><code>destinationPort</code></td>
 <td><code>uint32</code></td>
 <td>

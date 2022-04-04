@@ -542,7 +542,7 @@
             }
           },
           "tunnel": {
-            "$ref": "#/components/schemas/istio.networking.v1alpha3.TrafficPolicy.TunnelSettings"
+            "$ref": "#/components/schemas/istio.networking.v1alpha3.TrafficPolicy.TunnelSetting"
           }
         }
       },
@@ -567,11 +567,11 @@
           }
         }
       },
-      "istio.networking.v1alpha3.TrafficPolicy.TunnelSettings": {
+      "istio.networking.v1alpha3.TrafficPolicy.TunnelSetting": {
         "type": "object",
         "properties": {
           "protocol": {
-            "description": "Specifies which HTTP method to use for the upstream tunnel request. Supported protocol values are \"CONNECT\" and \"POST\". CONNECT method is used by default.",
+            "description": "Specifies which protocol to use for tunneling the downstream connection. Supported protocols are: connect - uses HTTP CONNECT; post - uses HTTP POST. HTTP version for upstream requests is determined by the service protocol defined for the proxy.",
             "type": "string"
           },
           "destinationPort": {
