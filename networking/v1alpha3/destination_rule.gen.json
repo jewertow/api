@@ -542,7 +542,7 @@
             }
           },
           "tunnel": {
-            "$ref": "#/components/schemas/istio.networking.v1alpha3.TrafficPolicy.TunnelSetting"
+            "$ref": "#/components/schemas/istio.networking.v1alpha3.TrafficPolicy.TunnelSettings"
           }
         }
       },
@@ -567,7 +567,7 @@
           }
         }
       },
-      "istio.networking.v1alpha3.TrafficPolicy.TunnelSetting": {
+      "istio.networking.v1alpha3.TrafficPolicy.TunnelSettings": {
         "type": "object",
         "properties": {
           "protocol": {

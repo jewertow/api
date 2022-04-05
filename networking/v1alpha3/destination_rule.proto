@@ -341,7 +341,7 @@ message TrafficPolicy {
   // to fields omitted in port-level traffic policies.
   repeated PortTrafficPolicy port_level_settings = 5;
 
-  message TunnelSetting {
+  message TunnelSettings {
     // Specifies which protocol to use for tunneling the downstream connection.
     // Supported protocols are:
     //   connect - uses HTTP CONNECT;
@@ -355,7 +355,7 @@ message TrafficPolicy {
 
   // Configuration of tunneling TCP over other transport or application layers
   // for the host configured in the DestinationRule.
-  TunnelSetting tunnel = 6;
+  TunnelSettings tunnel = 6;
 }
 
 // A subset of endpoints of a service. Subsets can be used for scenarios
