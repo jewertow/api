@@ -39705,6 +39705,11 @@
                     "id": 4,
                     "name": "max_connection_duration",
                     "type": "google.protobuf.Duration"
+                  },
+                  {
+                    "id": 5,
+                    "name": "idle_timeout",
+                    "type": "google.protobuf.Duration"
                   }
                 ],
                 "messages": [
@@ -42675,6 +42680,11 @@
                   {
                     "id": 4,
                     "name": "max_connection_duration",
+                    "type": "google.protobuf.Duration"
+                  },
+                  {
+                    "id": 5,
+                    "name": "idle_timeout",
                     "type": "google.protobuf.Duration"
                   }
                 ],
